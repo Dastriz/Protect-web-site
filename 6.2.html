@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="Start">Start</button>
+    <button class="Close">Close</button>
+    <script>
+        document.querySelector('.Start').addEventListener('click', () => {
+            result = prompt("Введите данные")
+
+            randomVar = Math.floor(1 + Math.random() * (5 + 1 - 1));
+            console.log(randomVar)
+
+            if (randomVar==1) {fontsize = '10px'; text = 'Ночь'; http = ''}
+            if (randomVar==2) {fontsize = '12px'; text = 'Утро'; http = ''}
+            if (randomVar==3) {fontsize = '14px'; text = 'День'; http = ''}
+            if (randomVar==4) {fontsize = '16px'; text = 'Вечер'; http = ''}
+            if (randomVar==5) {fontsize = '18px'; text = 'Ошибка'; http = ''}
+
+            w=window.open("", "", "width=200,height=200")
+            w.document.open()
+            w.document.write(`<body style="background: url(${http}) no-repeat center;background-size: cover;font-size: ${fontsize};">${text}</body>`)
+
+            document.querySelector('.Close').addEventListener('click', () => {
+                w.close()   
+            })
+        })
+
+        
+    </script>
+</body>
+</html>

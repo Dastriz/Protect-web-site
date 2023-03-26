@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button">Кнопка</button>
+    <script>
+        
+        button = document.querySelector('.button')
+        array = [1,4,-5,1,7,-9, -9]
+
+        button.addEventListener('click', (e) => {
+            a = Math.min(...array)
+            console.log(a, array.findIndex(i => i == a))
+        })
+
+    </script>
+</body>
+</html>
