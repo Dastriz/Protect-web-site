@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="input_1">
+    <input type="text" class="input_2">
+    <button class="button">Рассчитать</button>
+    <div class="result"></div>
+    <script>
+        
+        button = document.querySelector('.button')
+        result = document.querySelector('.result')
+        
+        button.addEventListener('click', (e) => {
+            x = Number(document.querySelector('.input_1').value)
+            y = Number(document.querySelector('.input_2').value)
+            z=(Math.abs(x**3-y**3)/(x+y)**2)-Math.sqrt((1+Math.abs(y))/x)
+
+            result.innerHTML = z
+
+        })
+
+        array = []
+        min = 5
+        max = 15
+
+        for (let i = 0; i < 10; i++) {
+            array.push(Math.floor(Math.random() * (max-min) + min))
+        }
+
+        console.log(array)
+
+        for (let i = 0; i < 10; i++) {
+            if (String(array[i]).length == 2) {
+                console.log(i)
+            }
+        }
+
+        months = ['январь', 'февраль', 'март', 'апрель','май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+        days = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+        d = new Date;
+        d.setFullYear(d.getFullYear() + 1);
+        d.setMonth(8);
+        console.log(d.getDate())
+        console.log(`${d.getDate()-1} ${months[d.getMonth()]} ${d.getFullYear()} ${days[d.getDay()]}`);
+
+        string = 'vbdfb sdcdssss'
+        sym = 's'
+
+        console.log(string.split(' ').pop().match(new RegExp(sym,'g')).length)
+    </script>
+</body>
+</html>

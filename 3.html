@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        k = 2 // корзин
+        a = 3 // корзин
+
+        m = 5 // кг
+        n = 100 // г
+
+        b = 3 // кг
+        c = 200 // г
+
+        console.log(k*(m*1000+n) + a*(b*1000+c) + "грамм")
+
+        a = 1
+        b = 2
+        c = 3
+
+        if (a==b==c) console.log("Числа равны")
+
+        A = 103
+        B = 20
+
+        divider = (num) => {
+            count = 0
+            for (let i = 1; i<=num; i++)
+                if (num%i==0) count += 1
+            return count
+        }
+
+        console.log(divider(A) == divider(B) ? "Числа имеют одинаковые кол-во делителей" : "Числа имеют разное кол-во делителей")
+    </script>
+</body>
+</html>
