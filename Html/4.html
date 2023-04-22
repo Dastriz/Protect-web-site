@@ -33,13 +33,16 @@
             array.push(Math.floor(Math.random() * (max-min) + min))
         }
 
-        console.log(array)
+		a = NaN
 
-        for (let i = 0; i < 10; i++) {
-            if (String(array[i]).length == 2) {
-                console.log(i)
-            }
-        }
+		for (let i = 0; i < 10; i++) {
+			if (String(array[i]).length == 2) {
+				a = array[i]
+			}
+		}
+
+
+if (a) console.log(a)
 
         months = ['январь', 'февраль', 'март', 'апрель','май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
         days = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
